@@ -56,7 +56,7 @@ export default function Hero() {
 
       {/* Typing line */}
       <div className="mt-6 text-[18px] text-gray-700 dark:text-gray-300 font-medium">
-        <TypingAnimation>
+        <TypingAnimation className="leading-normal">
           Generate tests • API docs • README • Architecture reports
         </TypingAnimation>
       </div>

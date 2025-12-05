@@ -13,6 +13,7 @@ export default function AppLayout({
 }) {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
@@ -36,12 +37,17 @@ export default function AppLayout({
 
   return (
     <div className="min-h-screen flex bg-white dark:bg-black">
-      {/* SIDEBAR (Desktop) */}
-      <AppSidebar />
+      {/* SIDEBAR (Desktop + Mobile) */}
+      <AppSidebar 
+        isOpen={sidebarOpen} 
+        onClose={() => setSidebarOpen(false)} 
+      />
 
       <div className="flex-1 flex flex-col min-h-screen lg:pl-64 transition-all duration-300">
         {/* HEADER */}
-        <AppHeader />
+        <AppHeader 
+          onMenuClick={() => setSidebarOpen(true)}
+        />
 
         {/* MAIN CONTENT */}
         <main className="flex-1 w-full p-6 lg:p-10 max-w-7xl mx-auto">

@@ -4,7 +4,11 @@ import { useRouter } from "next/navigation";
 import { LogOut, Menu, Moon } from "lucide-react";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 
-export default function AppHeader() {
+interface AppHeaderProps {
+  onMenuClick?: () => void;
+}
+
+export default function AppHeader({ onMenuClick }: AppHeaderProps) {
   const router = useRouter();
 
   return (
@@ -12,8 +16,11 @@ export default function AppHeader() {
       <div className="flex items-center justify-between h-10">
         
         {/* Mobile Menu Trigger (Visible only on mobile) */}
-        <button className="lg:hidden text-gray-600 dark:text-gray-300">
-          <Menu size={20} />
+        <button 
+          className="lg:hidden text-gray-600 dark:text-gray-300 p-1 -ml-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition"
+          onClick={onMenuClick}
+        >
+          <Menu size={24} />
         </button>
 
         {/* Spacer for desktop alignment if needed, or Breadcrumbs */}
