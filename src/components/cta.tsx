@@ -45,10 +45,10 @@ export default function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="mt-8 flex justify-center gap-4"
+          className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            className="px-8 py-3 rounded-xl bg-black dark:bg-white 
+            className="w-full sm:w-auto px-8 py-3 rounded-xl bg-black dark:bg-white 
                        text-white dark:text-black text-lg font-medium 
                        shadow-lg hover:bg-gray-900 dark:hover:bg-gray-200 transition"
             onClick={() => router.push("/dashboard")}
@@ -57,7 +57,7 @@ export default function CTA() {
           </button>
 
           <button
-            className="px-8 py-3 rounded-xl 
+            className="w-full sm:w-auto px-8 py-3 rounded-xl 
                        border border-gray-400 dark:border-gray-600 
                        text-gray-700 dark:text-gray-300 
                        text-lg font-medium 

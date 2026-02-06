@@ -46,7 +46,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-center font-semibold text-5xl md:text-6xl leading-tight tracking-tight"
+        className="text-center font-semibold text-4xl md:text-6xl leading-tight tracking-tight"
       >
         Turn Any GitHub Repo Into  
         <br />
@@ -67,7 +67,7 @@ export default function Hero() {
       </p>
 
       {/* CTAs -- FIX APPLIED */}
-      <div className="mt-8 flex gap-4 pointer-events-auto z-50">
+      <div className="mt-8 flex flex-col sm:flex-row gap-4 pointer-events-auto z-50">
         <HeroVideoDialog
           className="block"
           animationStyle="from-center"
@@ -75,7 +75,7 @@ export default function Hero() {
           thumbnailSrc="/Screenshot 2026-02-06 170707.png"
         >
           <button
-            className="px-6 py-3 rounded-xl bg-black dark:bg-white 
+            className="w-full sm:w-auto px-6 py-3 rounded-xl bg-black dark:bg-white 
                        text-white dark:text-black text-lg font-medium 
                        shadow-lg hover:bg-gray-900 dark:hover:bg-gray-200 transition cursor-pointer"
           >
@@ -84,7 +84,7 @@ export default function Hero() {
         </HeroVideoDialog>
 
         <button
-          className="px-6 py-3 rounded-xl 
+          className="w-full sm:w-auto px-6 py-3 rounded-xl 
                      border border-gray-400 dark:border-gray-600 
                      text-gray-700 dark:text-gray-300 
                      text-lg font-medium 

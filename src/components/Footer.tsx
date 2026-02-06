@@ -56,7 +56,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-200 dark:border-gray-800 py-4 text-center text-gray-500 dark:text-gray-400 text-sm">
-        Built with ❤️ by Rohan
+        Built by developer for developers
       </div>
     </footer>
   );
