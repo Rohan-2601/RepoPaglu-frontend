@@ -1,5 +1,3 @@
-
-
 "use client";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { TypingAnimation } from "@/components/ui/typing-animation";
@@ -8,6 +6,7 @@ import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { ArrowRightIcon } from "lucide-react";
 import { Globe } from "@/components/ui/globe";
 import { useRouter } from "next/navigation";
+import { HeroVideoDialog } from "@/components/ui/hero-video-dialog";
 
 export default function Hero() {
   const router = useRouter();
@@ -69,14 +68,20 @@ export default function Hero() {
 
       {/* CTAs -- FIX APPLIED */}
       <div className="mt-8 flex gap-4 pointer-events-auto z-50">
-        <button
-          className="px-6 py-3 rounded-xl bg-black dark:bg-white 
-                     text-white dark:text-black text-lg font-medium 
-                     shadow-lg hover:bg-gray-900 dark:hover:bg-gray-200 transition cursor-pointer"
-          onClick={() => router.push("/dashboard")}
+        <HeroVideoDialog
+          className="block"
+          animationStyle="from-center"
+          videoSrc="https://www.youtube.com/embed/BhnzgEgdTN4?si=4rb-zSdDkVK9qxxb"
+          thumbnailSrc="/Screenshot 2026-02-06 170707.png"
         >
-          Get Started Free
-        </button>
+          <button
+            className="px-6 py-3 rounded-xl bg-black dark:bg-white 
+                       text-white dark:text-black text-lg font-medium 
+                       shadow-lg hover:bg-gray-900 dark:hover:bg-gray-200 transition cursor-pointer"
+          >
+            Watch Demo
+          </button>
+        </HeroVideoDialog>
 
         <button
           className="px-6 py-3 rounded-xl 
